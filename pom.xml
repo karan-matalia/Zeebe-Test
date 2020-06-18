@@ -6,6 +6,7 @@
 
     <groupId>org.example</groupId>
     <artifactId>zeebetest</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <build>
         <plugins>
@@ -19,6 +20,9 @@
             </plugin>
         </plugins>
     </build>
+    <modules>
+        <module>spring-zeebe</module>
+    </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -41,6 +45,11 @@
             <groupId>io.zeebe</groupId>
             <artifactId>zeebe-client-java</artifactId>
             <version>0.23.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.zeebe.spring</groupId>
+            <artifactId>spring-zeebe-starter</artifactId>
+            <version>0.7.0</version>
         </dependency>
     </dependencies>
 </project>
