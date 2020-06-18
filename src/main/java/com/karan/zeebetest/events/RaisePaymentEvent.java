@@ -1,4 +1,4 @@
-package events;
+package com.karan.zeebetest.events;
 
 import io.zeebe.client.ZeebeClient;
 import io.zeebe.client.ZeebeClientBuilder;
