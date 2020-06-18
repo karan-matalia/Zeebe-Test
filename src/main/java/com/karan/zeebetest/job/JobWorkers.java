@@ -1,4 +1,4 @@
-package workflow;
+package com.karan.zeebetest.job;
 
 import io.zeebe.client.ZeebeClient;
 import io.zeebe.client.api.worker.JobWorker;
@@ -6,7 +6,7 @@ import io.zeebe.client.api.worker.JobWorker;
 import java.util.HashMap;
 import java.util.Map;
 
-public class App {
+public class JobWorkers {
     public static void main(final String[] args) {
         final ZeebeClient client = ZeebeClient.newClientBuilder()
                 .brokerContactPoint("127.0.0.1:26500")

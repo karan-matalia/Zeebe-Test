@@ -51,7 +51,7 @@
     </bpmn:exclusiveGateway>
     <bpmn:sequenceFlow id="Flow_0eoefd0" sourceRef="fetch-items" targetRef="ship-parcel" />
     <bpmn:sequenceFlow id="Flow_01pz563" name="totalPrice &#62; 50" sourceRef="Gateway_1nkzsdu" targetRef="add-insurance">
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">totalPrice &gt; 50</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=totalPrice &gt; 50</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="Flow_1f2ml5k" sourceRef="add-insurance" targetRef="Gateway_12m9kzh" />
     <bpmn:parallelGateway id="Gateway_1k6zbaz">
