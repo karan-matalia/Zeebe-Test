@@ -20,6 +20,21 @@ A repo to test various functionalities of the Zeebe tool.
   
   Also download the Zeebe Simple Monitor JAR from their repo and place it inside the Zeebe distribution folder.
   
+  Then Download the latest Zeebe Hazelcast exporter jar. The jar to be downloaded would be something like -
+   `zeebe-hazelcast-exporter-0.9.0-jar-with-dependencies.jar`. Then create a folder called `exporters` in the zeebe
+    broker folder and place the jar there.
+    
+  Post that open the `config` folder in zeebe broker and open the `application.yaml` file. In the application.yaml file
+  place the following lines at the top within the following  structure with proper indentation.
+  ```
+  zeebe:
+    broker:
+      exporters:
+        hazelcast:
+          className: io.zeebe.hazelcast.exporter.HazelcastExporter
+          jarPath: exporters/zeebe-hazelcast-exporter-${version}-jar-with-dependencies.jar
+  ```
+
   In a PowerShell window type the command - `./bin/broker` to run the Zeebe broker.
   
   In a new PowerShell window type ` java -jar zeebe-simple-monitor-${VERSION}.jar` to start the Zeebe Simple Monitor.
